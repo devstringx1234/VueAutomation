@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Automated Regression Suite">
+	<listeners>
+		<listener class-name="listner.ReportListener" />
+		<listener class-name="org.uncommons.reportng.HTMLReporter" />
+		<listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+	</listeners>
+	<test name="Cockpit Test Run">
+		<groups>
+			<run>
+				<include name="regression" />
+			</run>
+		</groups>
+		<classes>
+			<class name="tests.cockpit.RTETests" />
+			<!-- <class name="tests.cockpit.CreateAndManageTests" /> -->
+			<!-- <class name="tests.cockpit.NotificationsTests" /> -->
+		</classes>
+	</test>
+</suite>
